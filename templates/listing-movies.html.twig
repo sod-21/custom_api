@@ -1,0 +1,14 @@
+{% if result|length > 0  %}
+        {% for key, value in result %}
+             <div id="film-content">
+             <div><h2>Film Title:</h1><span>{{ value.title }}</span></div>
+              <div><h2>Episode:</h1><span>{{ value.episode_id }}</span></div>
+               <div><h2>Director:</h1><span>{{ value.director }}</span></div>
+               <div><h2>Producer:</h1><span>{{ value.producer }}</span></div>
+            <div><h2>Release Date:</h1><span>{{ value.release_date|date("M d Y") }}</span></div>
+             </div>
+             <hr>
+    {% endfor %}
+{% else %}
+    <h1>Sorry!, There is no data to display.</h1>
+{% endif %}

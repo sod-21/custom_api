@@ -1,0 +1,25 @@
+<?php
+
+
+function custom_api_preprocess_node__page(array &$variables){ 
+    $variables['#attached']['library'][] = 'custom_api/listing_css';
+}
+
+
+
+function custom_api_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'custom_api/listing_css';
+  
+}
+
+
+/**
+ * Implements hook_theme().
+ */
+function custom_api_theme($existing, $type, $theme, $path) {
+  return [
+    'listing_movies' => [
+      'variables' => ['result'=> NULL],
+    ],
+  ];
+}

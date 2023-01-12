@@ -1,0 +1,7 @@
+#film-content div{
+  display: flex; 
+  align-items: center;
+}
+#film-content h2{
+  margin-right: 50px;
+}
